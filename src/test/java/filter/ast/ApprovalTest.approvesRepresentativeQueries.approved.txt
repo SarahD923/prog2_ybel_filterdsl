@@ -1,0 +1,23 @@
+Query: artist == "Beatles"
+Pattern: (artist == "Beatles")
+Visitor: (artist == "Beatles")
+
+Query: year <= 1990
+Pattern: (year <= 1990)
+Visitor: (year <= 1990)
+
+Query: genre in ("rock", "jazz")
+Pattern: (genre in ("rock", "jazz"))
+Visitor: (genre in ("rock", "jazz"))
+
+Query: artist == "Beatles" and year == 1965
+Pattern: ((artist == "Beatles") and (year == 1965))
+Visitor: ((artist == "Beatles") and (year == 1965))
+
+Query: genre in ("rock", "jazz") or year <= 1990 and not artist == "Beatles"
+Pattern: ((genre in ("rock", "jazz")) or ((year <= 1990) and (not (artist == "Beatles"))))
+Visitor: ((genre in ("rock", "jazz")) or ((year <= 1990) and (not (artist == "Beatles"))))
+
+Query: (genre == "rock" or genre == "jazz") and year >= 1970
+Pattern: (((genre == "rock") or (genre == "jazz")) and (year >= 1970))
+Visitor: (((genre == "rock") or (genre == "jazz")) and (year >= 1970))
